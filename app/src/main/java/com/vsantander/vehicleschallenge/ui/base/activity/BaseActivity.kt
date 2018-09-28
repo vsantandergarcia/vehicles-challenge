@@ -1,4 +1,4 @@
-package com.vsantander.vehicleschallenge.ui.base
+package com.vsantander.vehicleschallenge.ui.base.activity
 
 import android.os.Bundle
 import android.support.annotation.IntDef

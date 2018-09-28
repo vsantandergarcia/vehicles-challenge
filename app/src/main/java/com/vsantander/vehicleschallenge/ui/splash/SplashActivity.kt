@@ -3,7 +3,9 @@ package com.vsantander.vehicleschallenge.ui.splash
 import android.os.Bundle
 import android.os.Handler
 import com.vsantander.vehicleschallenge.R
-import com.vsantander.vehicleschallenge.ui.base.BaseActivity
+import com.vsantander.vehicleschallenge.ui.base.activity.BaseActivity
+import com.vsantander.vehicleschallenge.ui.vehicles.VehiclesActivity
+import org.jetbrains.anko.startActivity
 import java.util.concurrent.TimeUnit
 
 @BaseActivity.Animation(BaseActivity.FADE)
@@ -17,7 +19,8 @@ class SplashActivity : BaseActivity() {
 
     private val runnable: Runnable = Runnable {
         if (!isFinishing) {
-            //TODO route next activity
+            startActivity<VehiclesActivity>()
+            finish()
         }
     }
 

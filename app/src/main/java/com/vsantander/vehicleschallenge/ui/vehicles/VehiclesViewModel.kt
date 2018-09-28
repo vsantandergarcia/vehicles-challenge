@@ -1,0 +1,43 @@
+package com.vsantander.vehicleschallenge.ui.vehicles
+
+import android.arch.lifecycle.MutableLiveData
+import com.vsantander.vehicleschallenge.data.repository.VehicleRepositoryImpl
+import com.vsantander.vehicleschallenge.domain.model.Coordinate
+import com.vsantander.vehicleschallenge.domain.model.Resource
+import com.vsantander.vehicleschallenge.domain.model.Vehicle
+import com.vsantander.vehicleschallenge.domain.usecase.base.GetAllVehiclesFromBounds
+import com.vsantander.vehicleschallenge.extension.logd
+import com.vsantander.vehicleschallenge.extension.loge
+import com.vsantander.vehicleschallenge.ui.base.viewmodel.BaseViewModel
+import com.vsantander.vehicleschallenge.utils.Constants
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.rxkotlin.plusAssign
+import io.reactivex.rxkotlin.subscribeBy
+import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
+
+class VehiclesViewModel @Inject constructor(
+        private val getAllVehiclesFromBounds: GetAllVehiclesFromBounds
+) : BaseViewModel() {
+
+    val resource = MutableLiveData<Resource<List<Vehicle>>>()
+
+    fun loadVehiclesFromBounds(coordinate1: Coordinate, coordinate2: Coordinate) {
+        resource.value = Resource.loading()
+
+        val params = GetAllVehiclesFromBounds.RequestValues(coordinate1,coordinate2)
+        disposables += getAllVehiclesFromBounds.buildUseCase(params)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeBy(
+                        onSuccess = {
+                            logd("loadVehiclesFromBounds.onSuccess")
+                            resource.value = Resource.success(it)
+                        },
+                        onError = {
+                            loge("loadVehiclesFromBounds.onError", it)
+                            resource.value = Resource.error(it)
+                        }
+                )
+    }
+}
