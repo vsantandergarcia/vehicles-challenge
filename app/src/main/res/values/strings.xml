@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">VehiclesChallenge</string>
+
+    <!-- Splash -->
+    <string name="splash_icon">SplashIcon</string>
+
 </resources>
