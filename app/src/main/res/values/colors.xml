@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/sushi</color>
+    <color name="colorPrimaryDark">@color/greenHaze</color>
+    <color name="colorAccent">@color/cerulean</color>
+
+    <color name="cerulean">#00ADEF</color>
+    <color name="greenHaze">#00A550</color>
+    <color name="sushi">#8CC63E</color>
+</resources>
