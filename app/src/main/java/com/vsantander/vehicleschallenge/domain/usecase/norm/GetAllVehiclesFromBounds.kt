@@ -1,8 +1,9 @@
-package com.vsantander.vehicleschallenge.domain.usecase.base
+package com.vsantander.vehicleschallenge.domain.usecase.norm
 
 import com.vsantander.vehicleschallenge.data.repository.VehicleRepositoryImpl
 import com.vsantander.vehicleschallenge.domain.model.Coordinate
 import com.vsantander.vehicleschallenge.domain.model.Vehicle
+import com.vsantander.vehicleschallenge.domain.usecase.base.SingleUseCase
 import io.reactivex.Single
 import javax.inject.Inject
 

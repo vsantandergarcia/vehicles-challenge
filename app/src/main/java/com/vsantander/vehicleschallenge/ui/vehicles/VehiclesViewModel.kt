@@ -1,15 +1,13 @@
 package com.vsantander.vehicleschallenge.ui.vehicles
 
 import android.arch.lifecycle.MutableLiveData
-import com.vsantander.vehicleschallenge.data.repository.VehicleRepositoryImpl
 import com.vsantander.vehicleschallenge.domain.model.Coordinate
 import com.vsantander.vehicleschallenge.domain.model.Resource
 import com.vsantander.vehicleschallenge.domain.model.Vehicle
-import com.vsantander.vehicleschallenge.domain.usecase.base.GetAllVehiclesFromBounds
+import com.vsantander.vehicleschallenge.domain.usecase.norm.GetAllVehiclesFromBounds
 import com.vsantander.vehicleschallenge.extension.logd
 import com.vsantander.vehicleschallenge.extension.loge
 import com.vsantander.vehicleschallenge.ui.base.viewmodel.BaseViewModel
-import com.vsantander.vehicleschallenge.utils.Constants
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.rxkotlin.subscribeBy
