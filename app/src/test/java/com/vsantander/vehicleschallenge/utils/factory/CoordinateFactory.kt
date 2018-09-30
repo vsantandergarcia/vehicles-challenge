@@ -8,8 +8,8 @@ class CoordinateFactory {
 
         fun makeCoordinateModel(): Coordinate {
             return Coordinate(
-                    latitude = DataFactory.randomFloat(),
-                    longitude = DataFactory.randomFloat()
+                    latitude = DataFactory.randomDouble(),
+                    longitude = DataFactory.randomDouble()
             )
         }
 

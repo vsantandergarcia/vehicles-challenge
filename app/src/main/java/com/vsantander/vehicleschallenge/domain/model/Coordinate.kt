@@ -5,6 +5,6 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Coordinate (
-        val latitude: Float,
-        val longitude: Float
+        val latitude: Double,
+        val longitude: Double
 ) : Parcelable

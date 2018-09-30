@@ -12,6 +12,10 @@ class DataFactory {
             return java.util.UUID.randomUUID().toString()
         }
 
+        fun randomDouble(): Double {
+            return Math.random()
+        }
+
         fun randomFloat(): Float {
             return Math.random().toFloat()
         }

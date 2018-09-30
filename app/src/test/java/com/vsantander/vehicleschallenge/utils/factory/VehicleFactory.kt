@@ -22,8 +22,8 @@ class VehicleFactory {
             return Vehicle(
                     id = DataFactory.randomUuid(),
                     coordinate = Coordinate(
-                            latitude = DataFactory.randomFloat(),
-                            longitude = DataFactory.randomFloat()
+                            latitude = DataFactory.randomDouble(),
+                            longitude = DataFactory.randomDouble()
                     ),
                     type = DataFactory.randomUuid(),
                     heading = DataFactory.randomFloat()
