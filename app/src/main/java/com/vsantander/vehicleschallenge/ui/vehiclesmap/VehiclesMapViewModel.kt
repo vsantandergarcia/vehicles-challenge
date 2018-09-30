@@ -1,4 +1,4 @@
-package com.vsantander.vehicleschallenge.ui.vehicles
+package com.vsantander.vehicleschallenge.ui.vehiclesmap
 
 import android.arch.lifecycle.MutableLiveData
 import com.vsantander.vehicleschallenge.domain.model.Coordinate
@@ -14,7 +14,7 @@ import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class VehiclesViewModel @Inject constructor(
+class VehiclesMapViewModel@Inject constructor(
         private val getAllVehiclesFromBounds: GetAllVehiclesFromBounds
 ) : BaseViewModel() {
 

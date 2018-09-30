@@ -24,7 +24,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.vehicles.VehiclesActivity" />
+        <activity android:name=".ui.vehicleslist.VehiclesListActivity" />
+
+        <activity android:name=".ui.vehiclesmap.VehiclesMapActivity" />
+
+        <!-- Api Key Google Maps -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD6PCz_hUzwzMKdzcOxtuUKKQzWnG83SzU"/>
 
     </application>
 

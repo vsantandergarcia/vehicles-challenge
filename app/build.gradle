@@ -33,9 +33,15 @@ dependencies {
     /* Android core */
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
 
     /* android architecture components */
     implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
+
+    /* Google Play Services */
+    implementation "com.google.android.gms:play-services-maps:$rootProject.googlePlayServiceVersion"
 
     /* kotlin core */
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
@@ -53,6 +59,7 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion"
     implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.rxKotlinVersion"
     implementation "org.jetbrains.anko:anko-commons:$rootProject.ankoVersion"
+    implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
 
     /* unit testing */
     testImplementation "junit:junit:$rootProject.junitVersion"

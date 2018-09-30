@@ -1,7 +1,8 @@
 package com.vsantander.vehicleschallenge.di
 
 import com.vsantander.vehicleschallenge.ui.splash.SplashActivity
-import com.vsantander.vehicleschallenge.ui.vehicles.VehiclesActivity
+import com.vsantander.vehicleschallenge.ui.vehicleslist.VehiclesListActivity
+import com.vsantander.vehicleschallenge.ui.vehiclesmap.VehiclesMapActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -12,5 +13,8 @@ abstract class ActivityModule {
     internal abstract fun contributeSplashActivity(): SplashActivity
 
     @ContributesAndroidInjector
-    internal abstract fun contributeVehiclesActivity(): VehiclesActivity
+    internal abstract fun contributeVehiclesActivity(): VehiclesListActivity
+
+    @ContributesAndroidInjector
+    internal abstract fun contributeVehiclesMapActivity(): VehiclesMapActivity
 }

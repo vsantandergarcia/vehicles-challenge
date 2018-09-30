@@ -6,9 +6,9 @@ object Constants {
     const val TIMEOUT_WS = 5 // in seconds
 
     // Hamburg Bounds
-    const val LATITUDE1_HAMBURG = 53.694865f
-    const val LONGUTUDE1_HAMBURG = 9.757589f
-    const val LATITUDE2_HAMBURG = 53.394655f
-    const val LONGITUDE2_HAMBURG = 10.099891f
+    const val LATITUDE1_HAMBURG = 53.694865
+    const val LONGUTUDE1_HAMBURG = 9.757589
+    const val LATITUDE2_HAMBURG = 53.394655
+    const val LONGITUDE2_HAMBURG = 10.099891
 
 }

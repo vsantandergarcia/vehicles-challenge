@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import com.vsantander.vehicleschallenge.R
 import com.vsantander.vehicleschallenge.ui.base.activity.BaseActivity
-import com.vsantander.vehicleschallenge.ui.vehicles.VehiclesActivity
+import com.vsantander.vehicleschallenge.ui.vehicleslist.VehiclesListActivity
 import org.jetbrains.anko.startActivity
 import java.util.concurrent.TimeUnit
 
@@ -19,7 +19,7 @@ class SplashActivity : BaseActivity() {
 
     private val runnable: Runnable = Runnable {
         if (!isFinishing) {
-            startActivity<VehiclesActivity>()
+            startActivity<VehiclesListActivity>()
             finish()
         }
     }
