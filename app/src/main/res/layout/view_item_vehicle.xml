@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/gameImageView"
+            android:id="@+id/vehicleImageView"
             android:layout_width="0dp"
             android:layout_height="@dimen/vehicle_item_img_height"
             android:contentDescription="@string/vehicle_item_img"
@@ -32,9 +32,9 @@
             android:padding="@dimen/activity_horizontal_margin"
             android:textAppearance="@style/TextBrandonGrotesqueBold16.Black"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="@+id/gameImageView"
-            app:layout_constraintRight_toRightOf="@+id/gameImageView"
-            app:layout_constraintTop_toBottomOf="@+id/gameImageView"
+            app:layout_constraintLeft_toLeftOf="@+id/vehicleImageView"
+            app:layout_constraintRight_toRightOf="@+id/vehicleImageView"
+            app:layout_constraintTop_toBottomOf="@+id/vehicleImageView"
             app:layout_constraintVertical_bias="0.5"
             tools:text="@sample/vehicle.json/id" />
 

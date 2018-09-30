@@ -54,7 +54,6 @@ class RestClientTest {
     fun getListVehiclesSuccess() {
         val fileContent = getFileContentAsString("response.json")
         val vehiclesTOList = Gson().fromJson<DefaultResponse<List<VehicleTO>>>(fileContent).data
-
         mockWebServer.enqueue(MockResponse().setBody(fileContent))
 
         val testObserver = service.getListVehicles(Mockito.anyString(),
@@ -70,7 +69,7 @@ class RestClientTest {
     }
 
     @Test
-    fun getListGamesBadRequest() {
+    fun getListVehiclesBadRequest() {
         mockWebServer.enqueue(MockResponse().setBody("{error:\"bad request\"").setResponseCode(400))
 
         val testObserver = service.getListVehicles(

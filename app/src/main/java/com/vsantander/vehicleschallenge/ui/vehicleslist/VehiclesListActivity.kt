@@ -49,7 +49,7 @@ class VehiclesListActivity : BaseActivity() {
 
         adapter = VehiclesAdapter().apply {
             onClickAction = {
-                logd("item vehicle click with id:${it}")
+                logd("item vehicle click with id:$it")
                 startActivity<VehiclesMapActivity>(Pair(VehiclesMapActivity.EXTRA_VEHICLE, it))
             }
         }

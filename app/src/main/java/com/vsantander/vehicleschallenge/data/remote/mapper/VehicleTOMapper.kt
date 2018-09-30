@@ -12,8 +12,7 @@ class VehicleTOMapper @Inject constructor() {
                 id = value.id,
                 coordinate = Coordinate(latitude = value.coordinate.latitude,
                         longitude = value.coordinate.longitude),
-                type = value.type,
-                heading = value.heading)
+                type = value.type)
     }
 
     fun toEntity(values: List<VehicleTO>): List<Vehicle> = values.map { toEntity(it) }

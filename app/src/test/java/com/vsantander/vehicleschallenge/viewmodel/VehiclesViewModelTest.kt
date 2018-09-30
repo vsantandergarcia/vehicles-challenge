@@ -5,7 +5,7 @@ import android.arch.lifecycle.Observer
 import com.vsantander.vehicleschallenge.domain.model.Resource
 import com.vsantander.vehicleschallenge.domain.model.Status
 import com.vsantander.vehicleschallenge.domain.model.Vehicle
-import com.vsantander.vehicleschallenge.domain.usecase.norm.GetAllVehiclesFromBounds
+import com.vsantander.vehicleschallenge.domain.usecase.GetAllVehiclesFromBounds
 import com.vsantander.vehicleschallenge.ui.vehicleslist.VehiclesListViewModel
 import com.vsantander.vehicleschallenge.utils.RxImmediateSchedulerRule
 import com.vsantander.vehicleschallenge.utils.factory.CoordinateFactory

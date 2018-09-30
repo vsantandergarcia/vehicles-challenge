@@ -22,7 +22,6 @@ import org.jetbrains.anko.contentView
 import javax.inject.Inject
 
 
-
 @BaseActivity.Animation(BaseActivity.PUSH)
 class VehiclesMapActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnCameraIdleListener {
 
@@ -37,6 +36,7 @@ class VehiclesMapActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnCame
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
     private lateinit var viewModel: VehiclesMapViewModel
+
     private var mapFragment: SupportMapFragment? = null
     private var googleMap: GoogleMap? = null
 
@@ -82,17 +82,17 @@ class VehiclesMapActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnCame
 
     /* OnMapReadyCallback methods */
 
-    override fun onMapReady(googleMap: GoogleMap?) {
-        googleMap ?: return
-        this.googleMap = googleMap
+    override fun onMapReady(map: GoogleMap?) {
+        map ?: return
+        googleMap = map
 
         vehicle?.let { vehicle ->
-            with(googleMap) {
+            googleMap?.apply {
                 val latlng = LatLng(vehicle.coordinate.latitude, vehicle.coordinate.longitude)
                 moveCamera(CameraUpdateFactory.newLatLngZoom(latlng, ZOOM_MAP_LEVEL))
                 bindVehicle(vehicle)
             }
-        } ?: googleMap.setOnCameraIdleListener(this)
+        } ?: googleMap?.setOnCameraIdleListener(this)
     }
 
     /* GoogleMap.OnCameraIdleListener methods */
@@ -114,6 +114,8 @@ class VehiclesMapActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnCame
 
     private fun bindVehicle(vehicle: Vehicle) {
         val latlng = LatLng(vehicle.coordinate.latitude, vehicle.coordinate.longitude)
-        googleMap?.addMarker(MarkerOptions().position(latlng))!!.title = vehicle.id
+        googleMap?.apply {
+            addMarker(MarkerOptions().position(latlng))!!.title = vehicle.id
+        }
     }
 }

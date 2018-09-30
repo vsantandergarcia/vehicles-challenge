@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity
 import com.vsantander.vehicleschallenge.R
 import com.vsantander.vehicleschallenge.di.Injectable
 
+/**
+ * Created by Jorge Guerrero
+ */
 abstract class BaseActivity: AppCompatActivity(), Injectable {
     annotation class Animation(@AnimationType val value: Int = NON_VALUE,
                                @AnimationType val enter: Int = NON_VALUE,

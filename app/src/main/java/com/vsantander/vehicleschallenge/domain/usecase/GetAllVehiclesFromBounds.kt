@@ -1,4 +1,4 @@
-package com.vsantander.vehicleschallenge.domain.usecase.norm
+package com.vsantander.vehicleschallenge.domain.usecase
 
 import com.vsantander.vehicleschallenge.data.repository.VehicleRepositoryImpl
 import com.vsantander.vehicleschallenge.domain.model.Coordinate

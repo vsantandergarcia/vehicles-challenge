@@ -2,8 +2,7 @@ package com.vsantander.vehicleschallenge.usecase
 
 import android.arch.core.executor.testing.InstantTaskExecutorRule
 import com.vsantander.vehicleschallenge.data.repository.VehicleRepositoryImpl
-import com.vsantander.vehicleschallenge.domain.model.Coordinate
-import com.vsantander.vehicleschallenge.domain.usecase.norm.GetAllVehiclesFromBounds
+import com.vsantander.vehicleschallenge.domain.usecase.GetAllVehiclesFromBounds
 import com.vsantander.vehicleschallenge.utils.RxImmediateSchedulerRule
 import com.vsantander.vehicleschallenge.utils.factory.CoordinateFactory
 import com.vsantander.vehicleschallenge.utils.factory.VehicleFactory

@@ -13,7 +13,7 @@ abstract class ActivityModule {
     internal abstract fun contributeSplashActivity(): SplashActivity
 
     @ContributesAndroidInjector
-    internal abstract fun contributeVehiclesActivity(): VehiclesListActivity
+    internal abstract fun contributeVehiclesListActivity(): VehiclesListActivity
 
     @ContributesAndroidInjector
     internal abstract fun contributeVehiclesMapActivity(): VehiclesMapActivity

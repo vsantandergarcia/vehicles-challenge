@@ -20,10 +20,10 @@ class VehiclesAdapter : RecyclerViewAdapterBase<Vehicle, ItemView<Vehicle>>() {
     }
 
     override fun onBindViewHolder(holder: ViewWrapper<ItemView<Vehicle>>, position: Int) {
-        val game = items[position]
+        val vehicle = items[position]
 
         holder.view.apply {
-            bind(game)
+            bind(vehicle)
         }
 
         holder.view.setOnClickListener { onClickAction?.invoke(items[position]) }

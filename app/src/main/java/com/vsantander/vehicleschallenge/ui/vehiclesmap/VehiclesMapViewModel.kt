@@ -4,7 +4,7 @@ import android.arch.lifecycle.MutableLiveData
 import com.vsantander.vehicleschallenge.domain.model.Coordinate
 import com.vsantander.vehicleschallenge.domain.model.Resource
 import com.vsantander.vehicleschallenge.domain.model.Vehicle
-import com.vsantander.vehicleschallenge.domain.usecase.norm.GetAllVehiclesFromBounds
+import com.vsantander.vehicleschallenge.domain.usecase.GetAllVehiclesFromBounds
 import com.vsantander.vehicleschallenge.extension.logd
 import com.vsantander.vehicleschallenge.extension.loge
 import com.vsantander.vehicleschallenge.ui.base.viewmodel.BaseViewModel
