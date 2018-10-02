@@ -17,7 +17,7 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun provideSpeedRunWebService(): RestClient {
+    fun providesRestClient(): RestClient {
         val clientBuilder = OkHttpClient.Builder()
         val loggingInterceptor = HttpLoggingInterceptor()
         loggingInterceptor.level = HttpLoggingInterceptor.Level.BASIC
